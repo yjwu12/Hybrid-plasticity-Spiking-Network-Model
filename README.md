@@ -6,7 +6,7 @@
 ## Setup
 We use the Pycharm platform. 
 - Installation link: https://www.jetbrains.com/pycharm/download/
-- Chooose your operating system and Python version 3.5
+- Chooose your operating system and Python version 3.5.2
 - Download and install
 
 ## Requirements
@@ -15,7 +15,7 @@ Linux: Ubuntu 16.04
 
 Cuda 9.0 & cudnn6.0
 
-Python 3.5
+Python 3.5.2
 
 Platform：NVIDIA Titan Xp and NVIDIA GTX 1080. 
 
