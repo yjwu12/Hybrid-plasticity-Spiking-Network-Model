@@ -1,0 +1,3 @@
+Pleaze modify the data_path in the main_model_v0.py and run this file.
+
+After ~100 epochs, it can get ~99.5% acc.
