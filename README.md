@@ -2,7 +2,7 @@
 - Code for paper  *Brain-inspired global-local hybrid learning towards human-like intelligence*. 
 - Dual plasticty (DP) models provides a generic framework for training global-local hybrid SNNs using pytorch.
 - DP models is designed to support multiple spike coding methods (rate-based and temporal based), multiple neuron models, and learning rules (Hebbian-based, STDP-based etc.)
-- Note: If the environment a configurations are different, the results may fail to work properly.
+- **Note**: If the environment a configurations are different, the results may fail to work properly.
 You may need to modify the package version or adjust code details according to your needs.
 
 ## Setup
