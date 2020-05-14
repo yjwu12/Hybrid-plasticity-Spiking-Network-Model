@@ -29,7 +29,7 @@ scikit-image 0.15.0
 
 ## Instructions
 
-- main_gp.py || Run the GP model in the Omniglot. It can obtain about 98.8 best acc.
+- main_gp.py || Run the GP model in the Omniglot. It can obtain about 98.8% best acc.
 
-- main_hp.py || Run the HP model in the Omniglot.. It can obtain about 28.7 best acc.
+- main_hp.py || Run the HP model in the Omniglot.. It can obtain about 28.7% best acc.
 
