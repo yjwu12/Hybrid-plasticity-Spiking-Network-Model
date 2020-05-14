@@ -12,9 +12,9 @@ You can also obtain the datasets from the following link:
 - Fashion-MNIST https://github.com/zalandoresearch/fashion-mnist
 
 ## Expected results
-After finishing the training, it can produces the following best results:
-MNIST: ~99.5% acc.
-Fashion-MNIST: ~93.3% acc.
-CIFAR10: ~91.1% acc.
+After finishing the training, it can produce the following best results:
+- MNIST: 99.5% acc.
+- Fashion-MNIST: 93.3% acc.
+- CIFAR10: 91.1% acc.
 
 
