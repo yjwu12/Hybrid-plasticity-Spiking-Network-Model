@@ -13,8 +13,10 @@ After training, it can obtain the following performance:
 LP model: 75.8%,
 GP model: 87.9%,
 HP model: 88.3%,
-In the robustness exp. (e.g.noise level = 7),it can obtain the following performance:
+
+In the robustness exp. (e.g.noise level = 6),it can obtain the following performance:
 LP model: 69.2%,
 GP model: 65.5%,
 HP model: 72.2%,
 
+Please note that the results of the robust experiment will vary due to the random noise, but it does not affect the main conclusions of this experiment。
