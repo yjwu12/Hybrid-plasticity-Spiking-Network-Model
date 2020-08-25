@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Hybrid plasticity model for multitask learning
-Python 3.5.2
+HP model for multitask learning
+"""
 
-"""
 
 from __future__ import print_function
 import sys
@@ -11,13 +9,13 @@ import torchvision
 import torchvision.transforms as transforms
 import os
 import torch
-os.environ['CUDA_VISIBLE_DEVICES'] = "0"
+# os.environ['CUDA_VISIBLE_DEVICES'] = "2"
 import time
 from hp_model import*
 
 
 data_path =  r'./' # Download the MNIST dataset and modify the data path
-saving_name = 'Hp_model'
+saving_name = 'hp_model'
 
 
 
@@ -34,8 +32,6 @@ def train():
     correct_all = []
     total_best_acc = []
     total_acc_record = []
-
-
 
     for numbers in range(exp_num):
         print('set the number:', numbers)
@@ -99,7 +95,7 @@ def train():
                         100 * float(train_correct) / float(train_total)))
 
             if train_task_index < train_meta_epoch:
-                # train the meta-parameters for only one epoch
+                # train the meta-parameters
                 for epoch in range(1):
                     train_correct = 0.
                     train_total = 0.
@@ -137,7 +133,7 @@ def train():
 
 
             # Test the Model
-
+            correct_all = []
             for task_index in range(train_task_index + 1):
                 ss = total_random[task_index]
                 correct = 0.
@@ -156,9 +152,24 @@ def train():
                         correct += (predicted == labels).sum()
                     correct_all.append((100 * float(correct) / float(total)))
 
+
+
+            # total_avg.append(sum(correct_all) / len(correct_all))
+
+
             if train_task_index>=0:
-                print("Task Number : %.2f, Average Test Accuracy on All Tasks: {0:%.2f} "% (train_task_index, sum(correct_all) / len(correct_all)))
-                total_avg.append(sum(correct_all) / len(correct_all))
+                print("\n\n Completed %.2d,   Average Test Accuracy on All Tasks: {0:%.2f} "%
+                      (train_task_index, sum(correct_all) / len(correct_all)))
+            total_avg.append(sum(correct_all) / len(correct_all))
+
+        state = {
+            'net': snn.state_dict(),
+            'total_avg': total_avg,
+            'total_random': total_random
+        }
+        if not os.path.isdir('checkpoint'):
+            os.mkdir('checkpoint')
+        torch.save(state, './checkpoint/ckpt' + saving_name + '.t7')
 
 
 def main():
