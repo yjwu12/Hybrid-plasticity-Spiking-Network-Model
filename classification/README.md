@@ -1,4 +1,4 @@
-Hybrid plasticity SNNs on classification.
+Hybrid plasticity SNNs on image classifications.
 
 ## Instructions
 Please load the respective folder, download the dataset, modify the data_path and run the file at the beginning of 'main_*' in the folder.
